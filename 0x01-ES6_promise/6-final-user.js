@@ -11,7 +11,7 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
       if (result.status === 'fulfilled') {
         resultArray.push({ status: result.status, value: result.value });
       } else {
-        resultArray.push({ status: result.status, value: result.reason });
+        resultArray.push({ status: result.status, value: `${result.reason}` });
       }
     });
     return resultArray;
