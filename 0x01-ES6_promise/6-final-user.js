@@ -5,13 +5,17 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
   const promiseSignUpUser = signUpUser(firstName, lastName);
   const promiseUploadPhoto = uploadPhoto(fileName);
 
-  return Promise.allSettled([promiseSignUpUser, promiseUploadPhoto])
-    .then(([user, photo]) => [{
-      status: user.status,
-      value: user.value,
-    },
-    {
-      status: photo.status,
-      value: photo.value,
-    }]);
+  return Promise.allSettled([promiseSignUpUser, promiseUploadPhoto]).then(([user, photo]) => {
+    /* eslint-disable-next-line no-unused-expressions */
+    [
+      {
+        status: user.status,
+        value: user.value,
+      },
+      {
+        status: photo.status,
+        value: photo.value,
+      },
+    ];
+  });
 }
