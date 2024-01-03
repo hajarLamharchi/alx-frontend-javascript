@@ -1,10 +1,9 @@
 export default function getResponseFromAPI() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      if(true) {
+      if (true) {
         resolve(true);
-      }
-      else {
+      } else {
         reject(false);
       }
     }, 2000);
