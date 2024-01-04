@@ -14,7 +14,7 @@ export default class HolbertonCourse {
   }
 
   get name() {
-    return `${this._name}`;
+    return this._name;
   }
 
   set name(value) {
@@ -22,7 +22,7 @@ export default class HolbertonCourse {
   }
 
   get length() {
-    return `${this._length}`;
+    return this._length;
   }
 
   set length(value) {
@@ -30,11 +30,7 @@ export default class HolbertonCourse {
   }
 
   get students() {
-    const arrayStudents = [];
-    for (const student of this._students) {
-      arrayStudents.push(student);
-    }
-    return arrayStudents;
+    return this._students;
   }
 
   set students(value) {
