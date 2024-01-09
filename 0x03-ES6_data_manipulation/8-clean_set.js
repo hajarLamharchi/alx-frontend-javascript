@@ -3,6 +3,6 @@ export default function cleanSet(set, startString) {
     return '';
   }
   return [...set]
-    .filter((elm) => elm.startsWith(startString))
-    .map((elm) => elm.slice(startString.length)).join('-');
+    .filter((elm) => (elm !== undefined ? elm.startsWith(startString) : ''))
+    .map((elm) => (elm !== undefined ? elm.slice(startString.length) : '')).join('-');
 }
